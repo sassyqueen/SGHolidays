@@ -57,7 +57,7 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
 
         tvDate.setText(currentHoliday.holidayDate());
         // Set the image to star or nostar accordingly
-        if(currentHoliday.isSecular()) {
+
             if (currentHoliday.holidayName() == "New Year's Day") {
                 ivHoliday.setImageResource(R.drawable.newyear);
             }
@@ -67,9 +67,7 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
             else if (currentHoliday.holidayName() == "National Day"){
                 ivHoliday.setImageResource(R.drawable.nationalday);
             }
-        }
-        else {
-            if (currentHoliday.holidayName() == "Chinese New Year"){
+            else if (currentHoliday.holidayName() == "Chinese New Year"){
                 ivHoliday.setImageResource(R.drawable.cny);
             }
             else if (currentHoliday.holidayName() == "Good Friday"){
@@ -91,7 +89,7 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
                 ivHoliday.setImageResource(R.drawable.christmas);
             }
 
-        }
+
         // Return the nicely done up View to the ListView
         return rowView;
     }

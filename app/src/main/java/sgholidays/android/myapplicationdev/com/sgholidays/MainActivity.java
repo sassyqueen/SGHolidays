@@ -37,11 +37,13 @@ public class MainActivity extends AppCompatActivity {
                 if (position == 0){
 
                     Intent i = new Intent(MainActivity.this, SecondActivity.class);
-                    i.putExtra("type", lv.getItemAtPosition(position).toString());
+                    i.putExtra("type", "Secular");
+                    i.putExtra("position", position);
                     startActivity(i);
                 } else if (position == 1){
                     Intent i = new Intent(MainActivity.this, SecondActivity.class);
-                    i.putExtra("type", lv.getItemAtPosition(position).toString());
+                    i.putExtra("type", "Ethnic and Religion");
+                    i.putExtra("position", position);
                     startActivity(i);
                 }
 

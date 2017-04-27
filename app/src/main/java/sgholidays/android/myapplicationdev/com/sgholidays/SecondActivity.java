@@ -28,23 +28,24 @@ public class SecondActivity extends AppCompatActivity {
 
         Intent i = getIntent();
         String type = i.getStringExtra("type");
+        int pos = i.getIntExtra("position", 0);
         tvHoliday.setText(type);
 
         lv = (ListView) findViewById(R.id.lvHoliday);
         holidays = new ArrayList<Holiday>();
-        if (type == "Secular"){
-            holidays.add(new Holiday("New Year's Day", "1 January 2017", true));
-            holidays.add(new Holiday("Labour Day", "1 May 2017", true));
-            holidays.add(new Holiday("National Day", "9 August 2017",  true));
+        if (pos == 0){
+            holidays.add(new Holiday("New Year's Day", "1 January 2017"));
+            holidays.add(new Holiday("Labour Day", "1 May 2017"));
+            holidays.add(new Holiday("National Day", "9 August 2017"));
         }
         else {
-            holidays.add(new Holiday("Chinese New Year","28 - 29 January 2017", false));
-            holidays.add(new Holiday("Good Friday","14 April 2017",false));
-            holidays.add(new Holiday("Vesak Day", "10 May 2017" , false));
-            holidays.add(new Holiday("Hari Raya Puasa", "25 June 2017", false));
-            holidays.add(new Holiday("Hari Raya Haji", "1 September 2017",  false));
-            holidays.add(new Holiday("Deepavali", "18 October 2017", false));
-            holidays.add(new Holiday("Christmas Day", "25 December 2017", false));
+            holidays.add(new Holiday("Chinese New Year","28 - 29 January 2017"));
+            holidays.add(new Holiday("Good Friday","14 April 2017"));
+            holidays.add(new Holiday("Vesak Day", "10 May 2017"));
+            holidays.add(new Holiday("Hari Raya Puasa", "25 June 2017"));
+            holidays.add(new Holiday("Hari Raya Haji", "1 September 2017"));
+            holidays.add(new Holiday("Deepavali", "18 October 2017"));
+            holidays.add(new Holiday("Christmas Day", "25 December 2017"));
         }
 
 

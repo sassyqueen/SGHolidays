@@ -7,12 +7,11 @@ package sgholidays.android.myapplicationdev.com.sgholidays;
 public class Holiday {
     private String holidayName;
     private String holidayDate;
-    private boolean isSecular;
 
-    public Holiday(String holidayName, String holidayDate, boolean isSecular){
+
+    public Holiday(String holidayName, String holidayDate){
         this.holidayName = holidayName;
         this.holidayDate = holidayDate;
-        this.isSecular = isSecular;
     }
 
     public String holidayName(){
@@ -21,7 +20,6 @@ public class Holiday {
     public String holidayDate(){
         return holidayDate;
     }
-    public boolean isSecular(){
-        return isSecular;
+
     }
-}
+
