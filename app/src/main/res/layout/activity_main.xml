@@ -8,14 +8,15 @@
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="306dp"
+        android:layout_width="423dp"
         android:layout_height="wrap_content"
         android:text="Types of Public Holidays in Singapore"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
     <ListView
         android:id="@+id/lvTypeHoliday"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="491dp" />
 
 </LinearLayout>
